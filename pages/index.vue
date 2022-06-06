@@ -17,8 +17,7 @@
 import Vue from 'vue'
 export default Vue.extend({
   name: 'IndexPage',
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const articles = await $content('articles')
       .only(['title', 'description', 'img', 'slug', 'author', 'createdAt'])
       .sortBy('createdAt', 'desc')
