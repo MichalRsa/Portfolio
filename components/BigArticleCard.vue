@@ -1,6 +1,9 @@
 <template>
   <div class="flex h-screen">
-    <div class="flex flex-row container md:h-96 h-64 max-w-6xl my-auto">
+    <NuxtLink
+      :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+      class="flex flex-row container md:h-96 h-64 max-w-6xl my-auto"
+    >
       <div class="w-7/12 overflow-hidden rounded-2xl">
         <img
           v-if="article.img"
@@ -13,10 +16,9 @@
         <h2 class="text-4xl font-bold pb-8">{{ article.title }}</h2>
         <p class="test-base font-light pb-8">{{ article.description }}</p>
       </div>
-    </div>
+    </NuxtLink>
   </div>
 </template>
-
 <script>
 export default {
   props: {

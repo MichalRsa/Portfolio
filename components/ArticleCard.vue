@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-    class="flex flex-col transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md"
+    class="flex flex-col transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md rounded-2xl"
   >
     <div class="overflow-hidden rounded-2xl">
       <img
@@ -25,7 +25,9 @@ export default {
   props: {
     article: { type: Object, default: () => {} },
   },
-  data() {},
+  data() {
+    return {}
+  },
 }
 </script>
 /
