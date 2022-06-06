@@ -5,7 +5,7 @@
       <li
         v-for="article of articles.slice(1)"
         :key="article.slug"
-        class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card"
+        class="w-full md:w-1/2 px-2 mb-6 md:mb-12 article-card"
       >
         <ArticleCard :article="article" />
       </li>
@@ -22,13 +22,8 @@ export default Vue.extend({
       .only(['title', 'description', 'img', 'slug', 'author', 'createdAt'])
       .sortBy('createdAt', 'desc')
       .fetch()
-    // const tags = await $content('tags')
-    //   .only(['name', 'description', 'img', 'slug'])
-    //   .sortBy('createdAt', 'asc')
-    //   .fetch()
     return {
       articles,
-      // tags,
     }
   },
 })
