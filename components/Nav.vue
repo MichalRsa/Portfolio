@@ -1,6 +1,6 @@
 <template>
-  <nav class="absolute">
-    <div class="flex justify-between w-screen px-12 py-6">
+  <nav>
+    <div class="flex justify-between px-12 py-6 w-full absolute box-border">
       <h1>MR</h1>
       <ul class="flex">
         <NuxtLink to="/">
