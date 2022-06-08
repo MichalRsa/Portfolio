@@ -2,7 +2,7 @@
   <article>
     <div class="container mx-auto lg:max-w-screen-md p-2">
       <header>
-        <div class="flex h-screen">
+        <div class="flex pt-16">
           <div class="flex flex-col my-auto w-full h-4/6">
             <h2 class="text-4xl font-bold p-8 pl-0.5">{{ article.title }}</h2>
             <div class="overflow-hidden max-h-screen rounded-2xl">
