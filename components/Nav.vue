@@ -5,7 +5,7 @@
       <ul class="flex">
         <NuxtLink to="/">
           <li
-            class="mr-6 hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-4"
+            class="ml-6 hover:underline hover:decoration-red-700 hover:decoration-2 hover:underline-offset-4"
           >
             HOME
           </li>
@@ -19,7 +19,7 @@
         </NuxtLink> -->
         <NuxtLink to="/about-me">
           <li
-            class="mr-6 hover:underline hover:decoration-2 hover:underline-offset-8"
+            class="ml-6 hover:underline hover:decoration-2 hover:underline-offset-8"
           >
             ABOUT ME
           </li>
