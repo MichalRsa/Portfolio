@@ -16,7 +16,7 @@
     <div
       class="md:max-w-lg rounded-3xl overflow-hidden self-end lg:min-w-[512px]"
     >
-      <img class="object-cover" src="myself.jpg" alt="" />
+      <img class="object-cover" src="/myself.jpg" alt="" />
     </div>
   </div>
 </template>
