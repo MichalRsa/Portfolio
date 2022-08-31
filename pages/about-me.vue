@@ -58,7 +58,7 @@
       </div>
     </div>
     <div>
-      <h2 class="text-3xl my-8">Technologies I used in comercial projects</h2>
+      <SectionTitle title="Technologies I used in comercial projects" />
       <ul
         class="flex items-center flex-wrap justify-center items-stretch md:w-10/12 w-full m-auto"
       >
@@ -70,6 +70,7 @@
               <img
                 :src="`/tech-icons/${icon.src}.webp`"
                 :alt="`${icon.alt} icon`"
+                :title="icon.alt"
                 class="object-cover w-24"
               />
             </div>
@@ -78,11 +79,79 @@
       </ul>
     </div>
     <div>
-      <h2 class="text-3xl">Currently I work for</h2>
-      <img class="w-36" src="/skygate.webp" alt="" />
+      <SectionTitle title="Most important projects" />
+      <div class="flex">
+        <div class="w-1/2">
+          <h2>Spotify Songsterr tabs</h2>
+          <p>
+            The biggest pet app that I wrote. As a amateur gitar player I wanted
+            the app that shows me tabs for recently listened tracks. So when I
+            don't have an idea what songs learn to play I can open the app and
+            look if some tabs from my recently listened songs on spotify are
+            available on Songsterr. It's cool I still use it!
+          </p>
+          <p>It uses React and Express</p>
+        </div>
+        <div class="w-1/2">
+          <img
+            class="w-full"
+            src="https://github.com/MichalRsa/spotify-songsterr-tabs/raw/main/imgs/aplikacjaMain.png"
+          />
+        </div>
+      </div>
     </div>
-    <div>Find me on</div>
-    <div>Contact</div>
+    <!-- <div>
+      <SectionTitle title="Currently I work for" />
+      <img class="w-36" src="/skygate.webp" alt="" />
+    </div> -->
+    <SectionTitle title="Find me on" />
+    <ul
+      class="flex items-center flex-wrap justify-center items-stretch md:w-10/12 w-full m-auto"
+    >
+      <li class="sm:m-2">
+        <a
+          target="_blank"
+          href="https://lubimyczytac.pl/profil/338223/Micha%C5%82"
+        >
+          <div
+            class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
+          >
+            <img
+              src="/lubimyczytac.png"
+              alt="lubiymczytac.pl icon"
+              class="object-cover w-8"
+            />
+          </div>
+        </a>
+      </li>
+      <li class="sm:m-2">
+        <a target="_blank" href="https://twitter.com/Michal__Rsa">
+          <div
+            class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
+          >
+            <img
+              src="/twitter.webp"
+              alt="twitter icon"
+              class="object-cover w-8"
+            />
+          </div>
+        </a>
+      </li>
+      <li class="sm:m-2">
+        <a target="_blank" href="https://github.com/MichalRsa">
+          <div
+            class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
+          >
+            <img
+              src="/tech-icons/github.webp"
+              alt="github icon"
+              class="object-cover w-8"
+            />
+          </div>
+        </a>
+      </li>
+    </ul>
+    <SectionTitle title="Contact" />
   </div>
 </template>
 
