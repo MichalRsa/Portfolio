@@ -19,33 +19,20 @@
           <p class="md:py-8 py-2 md:pl-8 text-2xl lg:text-3xl">
             Favorite stack
           </p>
+
           <ul class="flex flex-1 flex-wrap justify-center items-center">
-            <li class="basis-[36%]">
+            <li
+              v-for="(icon, index) in favIcons"
+              :key="index"
+              class="basis-[36%]"
+            >
               <div class="px-8 py-4 w-36 m-auto">
                 <img
-                  src="/tech-icons/postgresql.webp"
-                  alt=""
+                  :src="`/tech-icons/${icon.src}.webp`"
+                  :alt="`${icon.alt} icon`"
+                  :title="icon.alt"
                   class="object-cover"
                 />
-              </div>
-            </li>
-            <li class="basis-[36%]">
-              <div class="px-8 py-4 w-36 m-auto">
-                <img
-                  src="/tech-icons/express.webp"
-                  alt=""
-                  class="object-cover"
-                />
-              </div>
-            </li>
-            <li class="basis-[36%]">
-              <div class="px-8 py-4 w-36 m-auto">
-                <img src="/tech-icons/react.webp" alt="" class="object-cover" />
-              </div>
-            </li>
-            <li class="basis-[36%]">
-              <div class="px-8 py-4 w-36 m-auto">
-                <img src="/tech-icons/node.webp" alt="" class="object-cover" />
               </div>
             </li>
           </ul>
@@ -62,7 +49,7 @@
       <ul
         class="flex items-center flex-wrap justify-center items-stretch md:w-10/12 w-full m-auto"
       >
-        <li v-for="(icon, index) in icons" :key="index" class="sm:m-8">
+        <li v-for="(icon, index) in techIcons" :key="index" class="sm:m-8">
           <a target="_blank" :href="icon.link">
             <div
               class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
@@ -108,43 +95,15 @@
     <ul
       class="flex items-center flex-wrap justify-center items-stretch md:w-10/12 w-full m-auto"
     >
-      <li class="sm:m-2">
-        <a
-          target="_blank"
-          href="https://lubimyczytac.pl/profil/338223/Micha%C5%82"
-        >
+      <li v-for="(icon, index) in socialIcons" :key="index" class="sm:m-2">
+        <a target="_blank" :href="icon.link">
           <div
             class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
           >
             <img
-              src="/lubimyczytac.png"
-              alt="lubiymczytac.pl icon"
-              class="object-cover w-8"
-            />
-          </div>
-        </a>
-      </li>
-      <li class="sm:m-2">
-        <a target="_blank" href="https://twitter.com/Michal__Rsa">
-          <div
-            class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
-          >
-            <img
-              src="/twitter.webp"
-              alt="twitter icon"
-              class="object-cover w-8"
-            />
-          </div>
-        </a>
-      </li>
-      <li class="sm:m-2">
-        <a target="_blank" href="https://github.com/MichalRsa">
-          <div
-            class="px-12 py-8 h-full hover:bg-slate-50 rounded-3xl flex items-center"
-          >
-            <img
-              src="/tech-icons/github.webp"
-              alt="github icon"
+              :src="`/${icon.src}`"
+              :alt="`${icon.alt} icon`"
+              :title="icon.alt"
               class="object-cover w-8"
             />
           </div>
@@ -159,7 +118,39 @@
 export default {
   data() {
     return {
-      icons: [
+      socialIcons: [
+        {
+          src: 'lubimyczytac.png',
+          alt: 'lubiymczytac.pl icon',
+        },
+        {
+          src: 'twitter.webp',
+          alt: 'twitter icon',
+        },
+        {
+          src: 'tech-icons/github.webp',
+          alt: 'github icon',
+        },
+      ],
+      favIcons: [
+        {
+          src: 'postgresql',
+          alt: 'postgresql',
+        },
+        {
+          src: 'express',
+          alt: 'express',
+        },
+        {
+          src: 'react',
+          alt: 'react',
+        },
+        {
+          src: 'node',
+          alt: 'node.js',
+        },
+      ],
+      techIcons: [
         {
           src: 'postgresql',
           alt: 'postgresql',
